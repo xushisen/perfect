@@ -1,0 +1,32 @@
+package [daoPackage];
+
+import java.util.List;
+import java.util.Map;
+
+import [entityPackage].[entityClass];
+
+/**
+ * 
+ * 类描述：   [descritpion]
+ * 创建人：[author]  
+ * 创建时间：[date]  
+ * @version  1.0
+ *
+ */
+public interface [entityClass]Dao {
+	
+	/**
+	 * list查询
+	 * @param params
+	 * @return
+	 * @throws Exception
+	 */
+	public List<[entityClass]> getList(Map<String,Object> map) throws Exception;
+	
+	/**
+	 * 删除
+	 * @param ids
+	 * @throws Exception
+	 */
+	public void deleteByIds(String[] ids) throws Exception;
+}  

@@ -1,0 +1,17 @@
+*{margin:0;padding:0;}
+html,body{height:100%;}
+.imglist{width:99%;margin:10px auto;}
+.imglist ul li{list-style:none;width:100px;float:left;margin:10px;}
+
+/**图片预览开始*/
+.yl{width:90%;height:90%;background:rgba(0,0,0,.5);position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;}
+.yl .yl-img{position:absolute;}
+.yl span{width:20px;height:20px;position:absolute;right:20px;top:20px;border-radius:10px;text-align:center;line-height:20px;color:#fff;}
+.yl span:hover{background:red;cursor:pointer;}
+.yl .bottom{width:20px;height:20px;position:absolute;top:50%;}
+.yl .left{left:5%;}
+.yl .right{left:95%;}
+.yl a{text-decoration:none;color:#fff;}
+.yl .yeshu{width:40px;height:20px;position:absolute;left:50%;bottom:5%;color:#fff;}
+.yl .caozuo{width:100px;height:20px;position:absolute;left:80%;bottom:5%;color:#fff;}
+/**图片预览结束*/

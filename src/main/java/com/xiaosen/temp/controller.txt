@@ -1,0 +1,64 @@
+package [controllerPackage];
+
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.xiaosen.controller.BaseController;
+import [servicePackage].[entityClass]Service;
+
+/**
+ * 
+ * 类描述：   [descritpion]
+ * 创建人：[author]  
+ * 创建时间：[date]   
+ * @version  1.0
+ *
+ */
+@Controller
+@RequestMapping("/[lowerEntity]")
+public class [entityClass]Controller extends BaseController{
+
+	protected Logger logger = LoggerFactory.getLogger(getClass());
+	@Resource  
+    private [entityClass]Service [lowerEntity]Service;   //userService
+	
+	/**
+	 * list查询
+	 * @return
+	 */
+	@RequestMapping("/list")
+	public ModelAndView list(HttpServletRequest request){
+		try {
+			Map<String,Object> list = [lowerEntity]Service.getList(getRequestParams(request));
+			mav.addObject("list",list);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		mav.setViewName("[lowerEntity]/list");
+		return mav;
+	}
+	
+	/**
+	 * 删除
+	 */
+	@RequestMapping("/deleteByIds")
+	@ResponseBody
+	public String deleteByIds(String ids){
+		try {
+			[lowerEntity]Service.deleteByIds(ids);
+			return "success";
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+	}
+}

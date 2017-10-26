@@ -1,0 +1,46 @@
+*{margin:0px;padding:0px;}
+/**start 复选框*/
+.checkK{margin-left:10px;width:10px;height:10px;background:#bbb;border-radius:1px;position:relative;}
+.checkK_dian{width:5px;height:5px;background:red;border-radius:2px;position:absolute;top:50%;left:50%;margin-top:-3px;margin-left:-3px;}
+/**end 复选框*/
+
+/**start 美化a标签  background:red;font-size:10px;*/
+a{text-decoration:none;font-family:"微软雅黑";color:#fff;}
+a:hover{color:blue;}
+/**end 美化a标签*/
+
+/**start 表格开始*/
+.table{width:99%;margin:10px auto;border-collapse:collapse;}  /**border-collapse:collapse  为表格设置合并边框模型*/
+.table thead tr td{font-size:16px;text-indent:10px;}
+.table thead tr,.t_tab table tbody tr{margin:5px;height:30px;background:#4fada1;}
+.table tbody tr td{color:#949188;text-indent:10px;}
+.table tbody tr{height:30px;} /**background:#fff; 由js代替
+.table tbody tr:nth-child(even) {background:#e7eeee;}*/
+.table tbody tr:hover{background:rgba(200,200,200,1);}
+/**end 表格结束*/
+
+/**菜单开始*/
+.caidan{width:100px;display:none;background:#4fada1;border-radius:4px;overflow:hidden;}
+.caidan ul{list-style:none;border:1px solid #8f8f8f;}
+.caidan ul li{width:100%;height:30px;line-height:30px;font-size:14px;text-align:center;color:black;}
+.caidan ul li:not(:last-child){border-bottom:1px solid #c5c5c5;}
+.caidan ul li:hover{background:#c5c5c5;cursor:pointer;}
+/**菜单结束*/
+
+/**搜索框开始*/
+/**如果外面的高度要根据里面的内容去撑   并且有浮动的话  里面的都不设置高度  里面自动撑  最外面的那个高度就是overflow:auto  .search 就是高度自适应的例子*/
+.text{width:99%;margin:0 auto;overflow:auto;padding-top:10px;}
+.text .searchD{width:200px;height:30px;border-radius:5px;overflow:hidden;float:left;margin:0 20px 10px 0}
+.text .searchD span{width:35%;height:100%;background:#c9f;display:block;float:left;line-height:30px;text-indent:10px;}
+.text .searchD .inputText{float:right;width:65%;background:pink;height:100%;border:0;outline:none;text-indent:10px;color:#fff;}
+/**宽度自适应 inline-block  居中的话父div text-align:center;  ..buttom 就是宽度自适应的例子*/
+.b-center{width:99%;height:30px;margin:0 auto;text-align:center;}
+.b-center a{height:25px;display:inline-block;color:#fff;background:pink;text-decoration:none;line-height:25px;border-radius:4px;letter-spacing:3px;padding:0 5px;}
+/**搜索框结束*/
+
+/**自定义标签  S*/
+.page{display:inline-block;height:50px;float:right;margin-right:100px;}
+.page ul li{list-style:none;float:left;margin:0px 2px;padding:0px 8px;border:1px solid #B2E05D;border-radius:3px;font-size:14px;font-family:"微软雅黑";color:#88AF3F;}
+.page ul li:hover{cursor:pointer;color:#fff;background:#88AF3F;}
+.page .bg{color:#fff;background:#88AF3F;}
+/**自定义标签  E*/

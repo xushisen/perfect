@@ -1,0 +1,48 @@
+package [serviceImplPackage];
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.xiaosen.controller.tld.Page;
+import [daoPackage].[entityClass]Dao;
+import [entityPackage].[entityClass];
+import [servicePackage].[entityClass]Service;
+
+/**
+ * 
+ * 类描述：  [descritpion]
+ * 创建人：[author] 
+ * 创建时间：[date]
+ * @version  1.0
+ *
+ */
+@Service
+public class [entityClass]ServiceImpl implements [entityClass]Service {
+	@Autowired
+	private [entityClass]Dao [lowerEntity]Dao;
+
+	/**
+	 * list查询
+	 */
+	@Override
+	public Map<String,Object> getList(Map<String,Object> params) throws Exception {
+		Map<String,Object> pageMap = Page.getPageMap(params);
+		List<[entityClass]> list = [lowerEntity]Dao.getList(pageMap);
+		Map<String,Object> resultMap = new HashMap<String, Object>();
+		resultMap.put("list", list);
+		resultMap.put("page", pageMap);
+		return resultMap;
+	}
+	
+	/**
+	 * 删除
+	 */
+	@Override
+	public void deleteByIds(String ids) throws Exception{
+		[lowerEntity]Dao.deleteByIds(ids.split(","));
+	}
+}

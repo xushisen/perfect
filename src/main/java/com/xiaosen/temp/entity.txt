@@ -1,0 +1,4 @@
+package [entityPackage];
+
+public class [entityClass]{
+

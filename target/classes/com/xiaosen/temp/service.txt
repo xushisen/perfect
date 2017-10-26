@@ -1,0 +1,30 @@
+package [servicePackage];
+
+import java.util.Map;
+
+
+/**
+ * 
+ * 类描述：[descritpion]
+ * 创建人：[author]
+ * 创建时间：[date]   
+ * @version  1.0
+ *
+ */
+public interface [entityClass]Service {
+	
+	/**
+	 * list查询
+	 * @return
+	 * @throws Exception
+	 */
+	Map<String,Object> getList(Map<String,Object> params) throws Exception;
+
+	/**
+	 * 删除
+	 * @param ids
+	 * @throws Exception
+	 */
+	void deleteByIds(String ids) throws Exception;
+		
+}
