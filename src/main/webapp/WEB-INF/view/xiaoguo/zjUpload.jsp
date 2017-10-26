@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/zidingyi.css"/>
   </head>
   
-  <body>
+  <body style="overflow:auto;">
   	  <p style="font-size:20px;-webkit-text-stroke:1px red;color:#fff;font-weight:900;">默认支持多选上传 支持放大预览</p>
  	  <!-- 上传按钮美化开始 -->
       <a class="file" href="javascript:;">选择文件<input accept="image/*" type="file" value="上传" id="file_input" /></a> <br />
@@ -39,9 +39,9 @@
           */
           $.upload({
         	  "type":true,  //单穿false  多传true
-        	  "url":"/servlet/hello",  //路径
+        	  "url":"/xiaoguo/springUpload",  //路径
         	  "id":"file_input", //要触发的input file的id
-        	  "types":"jpg,gif,png", //需要上传的类型
+        	  "types":"jpg,gif,png,pdf", //需要上传的类型
         	  success:function(json){
         		  if(json != "error"){
 	        		  var jsonObject = eval("(" + json + ")");

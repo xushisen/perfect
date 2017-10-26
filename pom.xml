@@ -6,7 +6,7 @@
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<build>
-		<finalName>perfect</finalName> 
+		<finalName>perfect</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -179,7 +179,7 @@
 			<version>7.0.39</version>
 		</dependency>
 
-		<!-- 自定义标签   tomcat6 需要手动在打包好的web-inf lib 删除这2个jar  不然有冲突-->
+		<!-- 自定义标签 tomcat6 需要手动在打包好的web-inf lib 删除这2个jar 不然有冲突 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -190,7 +190,9 @@
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 		</dependency>
-		
+
+		<!-- 文件上传的jar -->
+
 		<!-- poi wold转html -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>

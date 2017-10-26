@@ -112,6 +112,7 @@ var jdtdiv = "<div class='jdt_k'><div class='jdt_title'>上传进度</div><div c
 			$("body").append(jdtdiv);  //进度框显示
 			//计算百分比    赋值给进度条宽度
 			var dqjd = Math.round(event.loaded*100/event.total);
+			console.log(dqjd);
 			//算出进度条的宽度
 			var jdtWidth = $(".jdt_k .jdt_con .jdt_con_dt").width();
 			var zuizhong;  //最终的百分比算出的宽度
