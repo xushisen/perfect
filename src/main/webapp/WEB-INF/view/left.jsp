@@ -21,6 +21,7 @@
 		      		<li><a target="Conframe" href="javascript:;" data-url="xiaoguo/xue">下雪</a></li>
 		      		<li><a target="Conframe" href="javascript:;" data-url="xiaoguo/zjUpload">异步直接上传</a></li>
 		      		<li><a target="Conframe" href="javascript:;" data-url="list">表格 纯右键操作</a></li><!-- xiaoguo/biaoge -->
+		      		<li><a target="Conframe" href="javascript:;" data-url="listfreemarker">表格 纯右键操作freemarker</a></li><!-- xiaoguo/biaoge -->
 		      		<li><a target="Conframe" href="javascript:;" data-url="xiaoguo/zidingyi">自定义标签</a></li>
       			</ul>
       		</li>

@@ -59,6 +59,21 @@ public class UserController extends BaseController{
     }   
 	
 	/**
+	 * listfreemarker查询
+	 * @return
+	 */
+	@RequestMapping("/listfreemarker")
+	public String listfreemarker(HttpServletRequest req,Map<String, Object> map){
+		try {
+			Map<String,Object> list = userService.getList(getRequestParams(req));
+			map.put("list", list);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "biaoge";
+	}
+	
+	/**
 	 * 登录校验
 	 * @param session
 	 * @param userName 页面用户名
