@@ -258,7 +258,7 @@ public class Address {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		System.out.println(address);
+		System.out.println(address); 
 		// 输出结果为：广东省,广州市,越秀区
 		System.out.println(Address.getMac());
 	}
