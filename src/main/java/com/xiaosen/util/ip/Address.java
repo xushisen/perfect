@@ -6,9 +6,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.net.URL;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.bind.DatatypeConverter;
 
 public class Address {
 	/**
@@ -230,6 +233,21 @@ public class Address {
 		return ip;
 	}
 
+	/**
+	 * java 获取mac地址
+	 * @param args
+	 */
+	public static String getMac(){
+		try {
+			InetAddress ia = InetAddress.getLocalHost();
+			byte[] mac = NetworkInterface.getByInetAddress(ia).getHardwareAddress();
+			return DatatypeConverter.printHexBinary(mac);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "";
+	}
+	
 	// 测试
 	public static void main(String[] args) {
 		// 测试ip 219.136.134.157 中国=华南=广东省=广州市=越秀区=电信
@@ -242,5 +260,6 @@ public class Address {
 		}
 		System.out.println(address);
 		// 输出结果为：广东省,广州市,越秀区
+		System.out.println(Address.getMac());
 	}
 }
