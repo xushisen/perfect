@@ -35,4 +35,10 @@ public class DiaoDeController extends BaseController {
 		 mav.setViewName("diaodebuxing/webSocket");
 		 return mav;
 	}
+	
+	@RequestMapping("/tree")
+	public ModelAndView tree(){
+		 mav.setViewName("diaodebuxing/tree");
+		 return mav;
+	}
 }
