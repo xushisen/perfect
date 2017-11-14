@@ -419,10 +419,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						$(this).parent().find("li:last span:first").removeClass("center_docu").addClass("bottom_docu");
 					}
 				});
-				//获取最外面的那个最后一个  竖线  修改css样式
-				$(".treeView > ul > li:last > ul").removeClass("line");
-				//获取最外面的那个最后一个  加号  修改css样式
-				$(".treeView > ul > li:last").find("span:first").removeClass("roots_close").addClass("bottom_close");
+				//为每层的最后一个li做处理   比如每层的最后一个ul要去掉class 是line  还有就是最后一个的加号减号的图标和正常的也不一样
+				$(".treeView ul").each(function (){
+					if($(this).find("ul").length){  //只有下面有ul的情况才会进入  因为最后一层是没有ul的  查找也没意义
+						$(this).find("li:last").parent().parent().find("ul").removeClass("line");  //每个最后一个li的ul
+						$(this).find("li:last").parent().parent().find("span:first").removeClass("roots_close").addClass("bottom_close");  //每个最后一个li的ul
+					}
+				});
 			}
 		
 			$(function(){
