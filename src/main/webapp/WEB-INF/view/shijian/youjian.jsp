@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			//打开遮罩
   			$.jzjd();  //打开遮罩
   			$.ajax({
-				 url:getRootPath()+"/servlet/mail",
+				 url:getRootPath()+"/email/sendEmail",
 				 type:"post",
 				 data:$("#mailForm").serialize(),
 				 dataType:"text",

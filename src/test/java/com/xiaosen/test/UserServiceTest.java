@@ -22,8 +22,8 @@ public class UserServiceTest extends SpringTestCase {
 
 	@Test
 	public void selectUserByIdTest() {
-		User user = userService.selectUserByPwd("徐石森","666666");
-		System.out.println(user.getUserEmail());
+		User user = userService.selectUserByPwd("xss","666666");
+		System.out.println(user.getUserName());
 		logger.debug("���ҽ��" + user.getUserEmail());
 	}
 
