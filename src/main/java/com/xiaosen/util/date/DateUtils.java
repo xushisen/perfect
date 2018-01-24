@@ -111,6 +111,35 @@ public class DateUtils {
     	return "计算出错";
     }
     
+	/***
+     * 给日期增加多少天
+     * 
+     * @param calDate
+     * @param addDate 类型必须是long
+     * @return
+     */
+    public static String addCalendarDay(Date calDate, long addDate) {
+        long time = calDate.getTime();
+        addDate = addDate * 24 * 60 * 60 * 1000;
+        time += addDate;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return dateFormat.format(new Date(time));
+    }
+    
+    /**
+     * 给日期加几个月 然后当前日减去一
+     * @param calDate
+     * @param addDate
+     * @return
+     */
+    public static String addCalendarMonth(Date calDate, int month) {
+    	Format f = new SimpleDateFormat("yyyy-MM-dd");
+	    Calendar c = Calendar.getInstance();
+	    c.add(Calendar.MONTH, month);
+	    c.add(Calendar.DAY_OF_MONTH, -1); 
+	    return f.format(c.getTime());
+    }
+
 	public static void main(String[] args) {
 		System.err.println(strToDate("2017-02-21 12:55:55","yyyy-MM-dd HH:mm:ss"));
 		//System.out.println(getNowDate("yyyy-MM-dd HH:mm:ss"));
