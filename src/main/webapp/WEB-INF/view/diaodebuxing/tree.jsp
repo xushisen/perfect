@@ -525,6 +525,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					$(this).prevAll(".bottom_close").removeClass("bottom_close").addClass("bottom_open");  //加号 是最后一个
 				});
 			}
+
+
+
+
+			/**
+	 * 递归返回json树结构
+	 * @param menuList
+	 * @param parentId
+	 * @return
+	 
+	public static JSONArray treeMenuList(JSONArray menuList, String parentId) {
+        JSONArray childMenu = new JSONArray();
+        for (Object object : menuList) {
+            JSONObject jsonMenu = JSONObject.fromObject(object);
+            String menuId = jsonMenu.getString("application_id");
+            String pid = jsonMenu.getString("application_parent_id");
+            if (parentId.equals(pid)) {
+                JSONArray c_node = treeMenuList(menuList, menuId);
+                jsonMenu.put("childNode", c_node);
+                childMenu.add(jsonMenu);
+            }
+        }
+        return childMenu;
+    }*/
+
 		</script>
   </body>
 </html>
