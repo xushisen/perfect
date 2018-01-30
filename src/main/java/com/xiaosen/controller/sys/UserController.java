@@ -82,14 +82,19 @@ public class UserController extends BaseController{
 	 */
 	@RequestMapping("/login")
 	@ResponseBody
-    public String getIndexs(HttpSession session, String userName, String passWord){      
-        User user = userService.selectUserByPwd(userName, passWord);
-        if (null != user){
-    		session.setAttribute("userName", user.getUserName());
-    		return "success";
-        } else {
-        	return "error";
-        }
+    public String getIndexs(HttpSession session, String userName, String passWord){
+		try {
+			User user = userService.selectUserByPwd(userName, passWord);
+	        if (null != user){
+	    		session.setAttribute("userName", user.getUserName());
+	    		return "success";
+	        } else {
+	        	return "error";
+	        }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "error";
     }
 	
 	/**
