@@ -251,7 +251,7 @@ public class Address {
 	}
 	
 	/**
-	 * 获取ip  调用的接口是show api
+	 * 获取ip  调用的接口是 www.showapi.com
 	 */
 	public static String getIp(){
 		String ip = "";
