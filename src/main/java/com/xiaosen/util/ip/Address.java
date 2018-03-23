@@ -1,8 +1,10 @@
 package com.xiaosen.util.ip;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
@@ -246,6 +248,35 @@ public class Address {
 			e.printStackTrace();
 		}
 		return "";
+	}
+	
+	/**
+	 * 获取ip  调用的接口是show api
+	 */
+	public static String getIp(){
+		String ip = "";
+		try {
+			URL u = new URL(
+					"http://route.showapi.com/632-1?showapi_appid=59910&showapi_sign=07e9f3f5e9ea43f499b9c425a085f784");
+			InputStream in = u.openStream();
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			try {
+				byte buf[] = new byte[1024];
+				int read = 0;
+				while ((read = in.read(buf)) > 0) {
+					out.write(buf, 0, read);
+				}
+				byte b[] = out.toByteArray();
+				ip = new String(b, "utf-8");
+			} finally {
+				if (in != null) {
+					in.close();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ip;
 	}
 	
 	// 测试
