@@ -41,4 +41,10 @@ public class DiaoDeController extends BaseController {
 		 mav.setViewName("diaodebuxing/tree");
 		 return mav;
 	}
+	
+	@RequestMapping("/fu")
+	public ModelAndView fu(){
+		 mav.setViewName("diaodebuxing/fuwenben");
+		 return mav;
+	}
 }

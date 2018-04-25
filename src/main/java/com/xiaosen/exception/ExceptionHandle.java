@@ -21,7 +21,7 @@ public class ExceptionHandle {
 	
 	protected Logger logger = LoggerFactory.getLogger(getClass());
 	
-	/** 使用方法   controller异常抛出   然后返回自定义异常    自定义异常会自动返回
+	/** 使用方法springboot下的使用方法    controller异常抛出   然后返回自定义异常    自定义异常会自动返回
 	@RequestMapping("/login")
 	public void loginUser(String userName, String userPwd,
 			HttpSession session) throws Exception {

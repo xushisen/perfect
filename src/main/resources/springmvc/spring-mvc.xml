@@ -23,6 +23,7 @@
 	<mvc:resources mapping="/music/**" location="/music/" />
 	<mvc:resources mapping="/music/**" location="/music/" />
 	<mvc:resources mapping="/awesome/**" location="/awesome/" />
+	<mvc:resources mapping="/kindeditor/**" location="/kindeditor/" />
 
 	<!-- 对模型视图添加前后缀 -->
 	<bean id="viewResolver"

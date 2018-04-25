@@ -47,6 +47,7 @@
       				<li><a target="Conframe" href="javascript:;" data-url="diaodebuxing/webSocket">webSocket</a></li>
       				<li><a target="Conframe" href="javascript:;" data-url="work/list">tenant</a></li>
       				<li><a target="Conframe" href="javascript:;" data-url="diaodebuxing/tree">树插件</a></li>
+      				<li><a target="Conframe" href="javascript:;" data-url="diaodebuxing/fu">富文本</a></li>
       			</ul>
       		</li>
       	</ul>
