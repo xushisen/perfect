@@ -18,8 +18,8 @@ public class StringUtils {
 	 * @param str
 	 * @return true 为空  false不为空
 	 */
-	public static boolean isEmpty(String str){
-		return null == str || "".equals(str) || str.length() == 0 || str.matches("\\s*");
+	public static boolean isEmpty(Object str){
+		return null == str || "".equals(str) || str.toString().length() == 0 || str.toString().matches("\\s*");
 	}
 	
 	/**
