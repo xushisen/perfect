@@ -14,11 +14,11 @@
   <body>
   <canvas id="myCanvas" width="400" height="400"></canvas>
     <div class="content">
-		<pre id="taag_output_text" style="float:left;" class="fig" contenteditable="true">               
-							_     _                
+    	<pre style="line-height:14px;color:red;">               
+					_     _                
 			__  ___   _ ___| |__ (_)___  ___ _ __  
 			\ \/ / | | / __| '_ \| / __|/ _ \ '_ \ 
-			 >  <| |_| \__ \ | | | \__ \  __/ | | |
+			 &gt;  &lt;| |_| \__ \ | | | \__ \  __/ | | |
 			/_/\_\\__,_|___/_| |_|_|___/\___|_| |_|
         </pre>
     	<p>
@@ -57,7 +57,7 @@
     		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片预加载:大型网站的图片懒加载的技术 <br />
     		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京东:自己写的京东网站<br />
     	</p>
-
+	</div>
 	<script type="text/javascript">
 		/**canvas*/
 		var c=document.getElementById("myCanvas");
