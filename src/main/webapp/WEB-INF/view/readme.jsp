@@ -184,7 +184,7 @@
 		        texts = "&nbsp;";
 		        break;
 		        case "猴":
-		        texts = "<a href=\"https://github.com/xushisen\">GitHub</a>";
+		        texts = "<a target=\"_black\" href=\"https://github.com/xushisen\">GitHub</a>";
 		        break;
 		        
 		     }
