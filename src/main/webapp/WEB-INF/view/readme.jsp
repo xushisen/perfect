@@ -183,7 +183,7 @@
 		        case "首":
 		        texts = "&nbsp;";
 		        break;
-		        case "森":
+		        case "猴":
 		        texts = "<a href=\"https://github.com/xushisen\">GitHub</a>";
 		        break;
 		        
@@ -196,7 +196,7 @@
 			      ds +="空空工作经历======空1 西安智贸信息科技有限公司空2 北京振安科技有限公司";
 			      ds +="空空教育经历======空运城职业技术学院";
 			      ds +="空空技术及语言======空前端 css3 h5 各种前端技术空java: SpringMVC, springboot, springcloud, Hibernate, iBatis, freemarker 空 数据库:mysql, oracle, redis, mongodb 空 WebServer: apache, nginx, tomcat 空 OS: CentOS, Windows";
-			      ds +="空空链接======空森";
+			      ds +="空空链接======空猴";
 			      ds +="空空联系方式======空电话:15229323003空邮箱:sen940224@163.com";
 			  var dss = ds.split("");
 			  var index = 0;
