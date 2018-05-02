@@ -21,7 +21,9 @@
 			 &gt;  &lt;| |_| \__ \ | | | \__ \  __/ | | |
 			/_/\_\\__,_|___/_| |_|_|___/\___|_| |_|
         </pre>
-    	<p>
+        
+        <p style="text-indent:0px;margin-left:50px;"></p>
+    	<%--<p>
     		项目介绍:
     	</p>
     	<p>
@@ -57,7 +59,8 @@
     		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片预加载:大型网站的图片懒加载的技术 <br />
     		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京东:自己写的京东网站<br />
     	</p>
-	</div>
+	--%></div>
+	<script type="text/javascript" src="js/jquery/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
 		/**canvas*/
 		var c=document.getElementById("myCanvas");
@@ -170,6 +173,43 @@
 		ctx.fill();
 		}
 		setInterval(draw,1000);
+		
+		 function tihuan(text){
+		     var texts = "";
+		     switch(text){
+		        case "空":
+		        texts = "<br />";
+		        break;
+		        case "首":
+		        texts = "&nbsp;";
+		        break;
+		        case "g":
+		        texts = "<a href=\"https://github.com/xushisen\">GitHub</a>";
+		        break;
+		        
+		     }
+		     return texts == "" ? text : texts ;
+		  }
+		$(function(){
+			  var ds = "/**大家好空首*我是徐石森空首*下面我来写一份我的简历*/";
+			  	  ds +="空空徐石森空空 坐标:陕西西安";
+			      ds +="空空工作经历======空1 西安智贸信息科技有限公司空2 北京振安科技有限公司";
+			      ds +="空空教育经历======空运城职业技术学院";
+			      ds +="空空技术及语言======空前端 css3 h5 各种前端技术空java: SpringMVC, springboot, springcloud, Hibernate, iBatis, freemarker 空 数据库:mysql, oracle, redis, mongodb 空 WebServer: apache, nginx, tomcat 空 OS: CentOS, Windows";
+			      ds +="空空链接======空g";
+			      ds +="空空联系方式======空电话:15229323003空邮箱:sen940224@163.com";
+			  var dss = ds.split("");
+			  var index = 0;
+			  var time = setInterval(function (){
+			     var text = tihuan(dss[index]);
+			     $(".content p").append(text);
+			     index ++;
+			     if (index == dss.length){
+			        console.log("清除定时器");
+			        clearInterval(time);
+			     }
+			  },100);
+			});
 	</script>
   </body>
 </html>
