@@ -39,7 +39,7 @@
   	</div>
   	<!-- 中间 E -->
   	<!-- 尾部 S -->
-  	<div class="indexButton"><span>停下休息的时候不要忘记  别人还在奔跑</span></div>
+  	<div class="indexButton"><span style="color:#ff0000;">停</span><span style="color:#ef1a01;">下</span><span style="color:#df3401;">休</span><span style="color:#cf4e02;">息</span><span style="color:#bf6803;">的</span><span style="color:#ae8203;">时</span><span style="color:#9e9c04;">候</span><span style="color:#8eb605;">不</span><span style="color:#7ed005;">要</span><span style="color:#6eea06;">忘</span><span style="color:#77e507;">记</span><span style="color:#80e108;"> </span><span style="color:#8adc09;"> </span><span style="color:#93d80a;">别</span><span style="color:#9cd30a;">人</span><span style="color:#a5cf0b;">还</span><span style="color:#afca0c;">在</span><span style="color:#b8c60d;">奔</span><span style="color:#c1c10e;">跑</span></div>
   	<!-- 尾部 E -->
   	<script type="text/javascript" src="js/jquery/jquery-1.9.1.min.js"></script>
   	<!-- 弹出框js -->
